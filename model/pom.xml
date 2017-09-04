@@ -10,7 +10,7 @@
 	<packaging>jar</packaging>
 	<name>model</name>
 
-	<!--hola desde svn-->
+	<!--hola desde svn  test 2-->
 
 	<dependencies>
 		<dependency>
