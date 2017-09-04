@@ -10,6 +10,8 @@
 	<packaging>jar</packaging>
 	<name>model</name>
 
+	<!--hola desde svn-->
+
 	<dependencies>
 		<dependency>
 			<groupId>com.mk.mnx</groupId>
