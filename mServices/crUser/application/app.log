@@ -1,0 +1,20 @@
+2017-08-29 16:50:11,791 - [  INFO] [                              ]-[             StartupInfoLogger:48]: Starting StartUpService on LAPTOP-LB3LT7K3 with PID 5856 (C:\Users\Mike\Work\code\jv\monox\mServices\crUser\target\classes started by Mike in C:\Users\Mike\Work\code\jv\monox\mServices\crUser)
+2017-08-29 16:50:11,801 - [ DEBUG] [                              ]-[             StartupInfoLogger:51]: Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-29 16:50:11,801 - [  INFO] [                              ]-[             SpringApplication:593]: No active profile set, falling back to default profiles: default
+2017-08-29 16:50:20,814 - [  INFO] [                              ]-[             StartupInfoLogger:57]: Started StartUpService in 9.747 seconds (JVM running for 20.79)
+2017-08-29 17:00:31,620 - [  INFO] [                              ]-[             StartupInfoLogger:48]: Starting StartUpService on LAPTOP-LB3LT7K3 with PID 3396 (C:\Users\Mike\Work\code\jv\monox\mServices\crUser\target\classes started by Mike in C:\Users\Mike\Work\code\jv\monox\mServices\crUser)
+2017-08-29 17:00:31,626 - [ DEBUG] [                              ]-[             StartupInfoLogger:51]: Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-29 17:00:31,626 - [  INFO] [                              ]-[             SpringApplication:593]: No active profile set, falling back to default profiles: default
+2017-08-29 17:00:41,122 - [  INFO] [                              ]-[             StartupInfoLogger:57]: Started StartUpService in 10.373 seconds (JVM running for 21.169)
+2017-08-31 15:45:49,723 - [  INFO] [                              ]-[             StartupInfoLogger:48]: Starting StartUpService on LAPTOP-LB3LT7K3 with PID 3068 (C:\Users\Mike\Work\code\jv\monox\mServices\crUser\target\classes started by Mike in C:\Users\Mike\Work\code\jv\monox\mServices\crUser)
+2017-08-31 15:45:49,732 - [ DEBUG] [                              ]-[             StartupInfoLogger:51]: Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-08-31 15:45:49,733 - [  INFO] [                              ]-[             SpringApplication:593]: No active profile set, falling back to default profiles: default
+2017-08-31 15:45:59,863 - [  INFO] [                              ]-[             StartupInfoLogger:57]: Started StartUpService in 10.989 seconds (JVM running for 29.086)
+2017-09-01 13:50:47,595 - [  INFO] [                              ]-[             StartupInfoLogger:48]: Starting StartUpService on LAPTOP-LB3LT7K3 with PID 5800 (C:\Users\Mike\Work\code\jv\monox\mServices\crUser\target\classes started by Mike in C:\Users\Mike\Work\code\jv\monox\mServices\crUser)
+2017-09-01 13:50:47,599 - [ DEBUG] [                              ]-[             StartupInfoLogger:51]: Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-01 13:50:47,599 - [  INFO] [                              ]-[             SpringApplication:593]: No active profile set, falling back to default profiles: default
+2017-09-01 13:50:52,362 - [  INFO] [                              ]-[             StartupInfoLogger:57]: Started StartUpService in 5.112 seconds (JVM running for 16.117)
+2017-09-01 16:58:40,219 - [  INFO] [                              ]-[             StartupInfoLogger:48]: Starting StartUpService on LAPTOP-LB3LT7K3 with PID 1256 (C:\Users\Mike\Work\code\jv\monox\mServices\crUser\target\classes started by Mike in C:\Users\Mike\Work\code\jv\monox\mServices\crUser)
+2017-09-01 16:58:40,228 - [ DEBUG] [                              ]-[             StartupInfoLogger:51]: Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-01 16:58:40,229 - [  INFO] [                              ]-[             SpringApplication:593]: No active profile set, falling back to default profiles: default
+2017-09-01 16:58:51,544 - [  INFO] [                              ]-[             StartupInfoLogger:57]: Started StartUpService in 12.394 seconds (JVM running for 22.574)

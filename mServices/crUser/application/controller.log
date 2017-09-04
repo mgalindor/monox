@@ -1,0 +1,12 @@
+2017-08-29 16:50:16,026 - [ DEBUG] [                              ]-[                     MDCFilter:29]: Se inicia el filtro
+2017-08-29 16:52:57,017 - [ DEBUG] [                              ]-[                     MDCFilter:33]: Estoy en el filtro
+2017-08-29 16:52:57,018 - [ DEBUG] [                              ]-[                     MDCFilter:37]: Estoy en el filtro [null]
+2017-08-29 16:52:57,078 - [ DEBUG] [                              ]-[     CreaUsuarioRestController:24]: Start to download
+2017-08-29 16:53:47,446 - [ DEBUG] [                              ]-[                     MDCFilter:33]: Estoy en el filtro
+2017-08-29 16:53:47,448 - [ DEBUG] [                              ]-[                     MDCFilter:37]: Estoy en el filtro [morty]
+2017-08-29 16:53:47,453 - [ DEBUG] [                         morty]-[     CreaUsuarioRestController:24]: Start to download
+2017-08-29 17:04:26,977 - [ DEBUG] [                         morty]-[     CreaUsuarioRestController:24]: Start to download
+2017-08-29 17:05:15,285 - [ DEBUG] [                          rick]-[     CreaUsuarioRestController:24]: Start to download
+2017-08-31 16:32:13,525 - [ DEBUG] [                              ]-[     CreaUsuarioRestController:24]: Start to download
+2017-09-01 13:51:20,403 - [ DEBUG] [                 1504291880288]-[     CreaUsuarioRestController:24]: Start to download
+2017-09-01 17:07:33,640 - [ DEBUG] [                 1504303653521]-[     CreaUsuarioRestController:24]: Start to download
