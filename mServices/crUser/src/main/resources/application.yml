@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: createUsers
+  data:
+    mongodb:
+      uri: mongodb://mk:mk$123@192.168.33.11/monox
+
+server:
+  port: 8088
+  contextPath: /monox
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://EUREKASVR:8060/eureka}
+  instance:
+    preferIpAddress: true
+    
