@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mk.mnx.crUser.service.CrearUsuarioService;
@@ -13,7 +12,6 @@ import com.mk.mnx.model.domain.Name;
 import com.mk.mnx.model.domain.Person;
 
 @RestController
-@RequestMapping("monox")
 public class CreaUsuarioRestController extends BaseRestController {
 	
 	@Autowired 

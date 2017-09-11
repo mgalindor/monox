@@ -1,6 +1,46 @@
+    
+---
+spring:
+  profiles: peer1
+  application:
+    name: Eureka Server
+server:
+  port: 8050
+eureka:
+  instance:
+    hostname: eureka.peer.one
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://eureka.peer.two:8060/eureka/
+
+---
+spring:
+  profiles: peer2
+  application:
+    name: Eureka Server
 server:
   port: 8060
 eureka:
+  instance:
+    hostname: eureka.peer.two
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://eureka.peer.one:8050/eureka/
+      
+---
+spring:
+  profiles: sa
+  application:
+    name: Eureka Server
+server:
+  port: 8050
+eureka:
+  instance:
+    hostname: eureka.peer.one
   client:
     registerWithEureka: false
     fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

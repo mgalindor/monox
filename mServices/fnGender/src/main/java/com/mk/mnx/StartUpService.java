@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 @EnableEurekaClient
+//@EnableHystrix
 @ImportResource("classpath:application-context.xml")
 public class StartUpService {
 

@@ -1,18 +1,19 @@
 spring:
   application:
-    name: createUsers
+    name: monox-tkn
   data:
     mongodb:
       uri: mongodb://mk:mk$123@192.168.33.11/monox
 
 server:
   port: 8085
-  contextPath: /monox
+  #Zuul no sabe resolver contexto, por lo que el contexto sera equivalente al application.name
+  #contextPath: /monox-tkn
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://EUREKASVR:8060/eureka}
+      defaultZone: http://eureka.peer.one:8050/eureka,http://http://eureka.peer.two:8060/eureka
   instance:
     preferIpAddress: true
     
