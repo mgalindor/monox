@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: monox-loc
+  data:
+    mongodb:
+      uri: mongodb://mk:mk$123@192.168.33.11/monox
+
+server:
+  port: 8082
+  #Zuul no sabe resolver contexto, por lo que el contexto sera equivalente al application.name
+  #contextPath: /monox-nat
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka.peer.one:8050/eureka,http://http://eureka.peer.two:8060/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    preferIpAddress: true
+    
