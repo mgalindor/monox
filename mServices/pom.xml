@@ -14,6 +14,8 @@
     <module>crUser</module>
     <module>fnGender</module>
     <module>fnNationalities</module>
+
+    <module>fnLocation</module>
  
   </modules>
 

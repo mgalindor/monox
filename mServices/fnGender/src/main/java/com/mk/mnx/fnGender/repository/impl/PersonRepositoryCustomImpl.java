@@ -7,22 +7,18 @@ import static org.springframework.data.mongodb.core.aggregation.Aggregation.sort
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.stereotype.Repository;
 
 import com.mk.mnx.fnGender.repository.PersonRepositoryCustom;
+import com.mk.mnx.infr.repository.BaseCustomRepository;
 import com.mk.mnx.model.domain.Item;
 import com.mk.mnx.model.domain.Person;
 
 @Repository
-public class PersonRepositoryCustomImpl implements PersonRepositoryCustom {
-
-	@Autowired
-	private MongoTemplate mongoTemplate;
+public class PersonRepositoryCustomImpl extends BaseCustomRepository implements PersonRepositoryCustom {
 
 	public List<Item> obtenerEstadisticaGeneros() {
 		Aggregation agg = newAggregation( group("gender").count().as("value"),
@@ -30,7 +26,7 @@ public class PersonRepositoryCustomImpl implements PersonRepositoryCustom {
 		).withOptions(Aggregation.newAggregationOptions(). allowDiskUse(true).build());
 
 		// Convert the aggregation result into a List
-		AggregationResults<Item> groupResults = mongoTemplate.aggregate(agg, Person.class, Item.class);
+		AggregationResults<Item> groupResults = getTemplate().aggregate(agg, Person.class, Item.class);
 		List<Item> result = groupResults.getMappedResults();
 
 		return result;
