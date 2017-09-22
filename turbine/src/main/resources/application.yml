@@ -1,0 +1,31 @@
+# Spring properties
+spring:
+  application:
+     name: turbine
+ 
+server:
+  port: 4444   # HTTP (Tomcat) port
+  
+  
+turbine:
+  aggregator:
+    clusterConfig: MONOX-USR
+  appConfig: monox-usr
+
+   
+---
+spring:
+  profiles: sa
+eureka:
+  client:  
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://eureka.peer.one:8050/eureka
+---
+spring:
+  profiles: cl
+eureka:
+  client:  
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://eureka.peer.one:8050/eureka,http://http://eureka.peer.two:8060/eureka
