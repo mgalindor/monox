@@ -12,9 +12,11 @@ import org.springframework.web.client.RestTemplate;
 import com.mk.mnx.crUser.repository.PersonRepository;
 import com.mk.mnx.crUser.repository.UserRepository;
 import com.mk.mnx.infr.service.BaseService;
+import com.mk.mnx.model.domain.Name;
 import com.mk.mnx.model.domain.Person;
 import com.mk.mnx.model.domain.RandomUserResponse;
 import com.mk.mnx.model.domain.User;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
 public class CrearUsuarioService extends BaseService{
@@ -40,7 +42,7 @@ public class CrearUsuarioService extends BaseService{
 		return rnd.getResults().get(0);
 	}
 	
-	
+	@HystrixCommand()
 	public Person creaPersona()
 	{
 		Person p  = descargaPersona();
@@ -58,6 +60,20 @@ public class CrearUsuarioService extends BaseService{
 		return p;
 	}
 	
+	@HystrixCommand()
+	public Person getUser( Person in) {
+		in.getName().setFirst("Miguel");
+		in.getName().setLast("Galindo");
+		return in;
+	}
+	
+	@HystrixCommand()
+	public Name getName() {
+		Name name = new Name();
+		name.setFirst("Miguel");
+		name.setLast("Galindo");
+		return name;
+	}
 	
 	
 }

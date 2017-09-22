@@ -32,17 +32,12 @@ public class CreaUsuarioRestController extends BaseRestController {
 	
 	@PostMapping(path="userTest")
 	public Person getUser(@RequestBody Person in) {
-		in.getName().setFirst("Miguel");
-		in.getName().setLast("Galindo");
-		return in;
+		return crearUsuarioService.getUser(in);
 	}
 	
 	@GetMapping("test")
 	public Name getName() {
-		Name name = new Name();
-		name.setFirst("Miguel");
-		name.setLast("Galindo");
-		return name;
+		return crearUsuarioService.getName();
 	}
 
 }
