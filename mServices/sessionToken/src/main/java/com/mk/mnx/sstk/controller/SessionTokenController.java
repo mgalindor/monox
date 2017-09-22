@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mk.mnx.infr.controller.BaseRestController;
 import com.mk.mnx.model.domain.User;
 import com.mk.mnx.sstk.service.SessionTokenService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
 public class SessionTokenController extends BaseRestController {
@@ -17,6 +18,7 @@ public class SessionTokenController extends BaseRestController {
 	SessionTokenService sessionTokenService;
 	
 	@PostMapping("sessionToken")
+	@HystrixCommand
 	public String createSessionToken(@RequestBody User in) {
 		String r = "";
 		try {
@@ -30,5 +32,6 @@ public class SessionTokenController extends BaseRestController {
 	}
 
 	@GetMapping("hola")
+	@HystrixCommand
 	public String hola() {return "hola";}
 }
