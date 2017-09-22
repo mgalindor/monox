@@ -8,6 +8,9 @@
 #http://localhost:4444/turbine.stream
 #Se podran monitorear los servicios configurados en appConfig
 #si es que cuentan con las @HystrixCommand, las dependencias de hystrix y tener habilitado healthcheck : true
+
+##Importante
+#@HystrixCommand Cambia el scope del bean anotado a thread es recomendable no poner la anotacion en un controller se sugiere poner en el servicio
 spring:
   application:
      name: turbine
