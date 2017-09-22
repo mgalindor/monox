@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,6 +39,8 @@ public class MDCFilter implements Filter {
 			}
 			MDC.put(CommonConstants.MDC_TOKEN, mdcData);
 			logger.info("Estoy en el filtro [{}]",mdcData);
+			HttpServletResponse httpResponse = (HttpServletResponse) response;
+			httpResponse.addHeader(CommonConstants.MDC_HTTP_HEADER, mdcData);
 			chain.doFilter(request, response);
 		} finally {
 			MDC.clear();
