@@ -9,6 +9,8 @@ public interface CommonConstants {
 	
 	String TOKEN_PASS="mnk$123";
 	Integer NUMBER_OF_DAYS_TOKEN_LIVE=1;
+	String TOKEN_ROLES="roles";
+	
 	
 	
 	String LOGGER_INFRA="infra";

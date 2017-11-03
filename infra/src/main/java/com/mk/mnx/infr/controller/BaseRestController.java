@@ -20,18 +20,21 @@ public abstract class BaseRestController {
     
     @Autowired
 	private HttpServletRequest request;
-    
+   
     protected String getUser() {	
 		return (String) request.getAttribute(CommonConstants.SESSION_USER);
 	}
     
     @ExceptionHandler(Exception.class)
     public void handleError(HttpServletRequest req, HttpServletResponse resp , Exception ex) throws IOException {
-    	loggerException.error("Request: [{}] message: [{}]" , req.getRequestURL() , ex.getMessage());
+    	//loggerException.error("Request: [{}] message: [{}]" , req.getRequestURL() , ex.getMessage());
     	loggerException.error("Error:",ex);
     	resp.sendError(HttpServletResponse.SC_CONFLICT,ex.getMessage());
 
     }
 
-
+    public HttpServletRequest getRequest() {
+		return request;
+	}
+    
 }

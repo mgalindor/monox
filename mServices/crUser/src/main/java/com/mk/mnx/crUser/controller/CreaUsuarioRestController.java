@@ -13,28 +13,23 @@ import com.mk.mnx.model.domain.Person;
 
 @RestController
 public class CreaUsuarioRestController extends BaseRestController {
-	
-	@Autowired 
+
+	@Autowired
 	CrearUsuarioService crearUsuarioService;
-	
+
 	@GetMapping("user")
 	public Person createUser() {
 		logger.debug("Start to download");
-		Person p=null;
-		try {
+		Person p = null;
 		p = crearUsuarioService.creaPersona();
-		}
-		catch(Exception e) {
-			logger.error("Error: ",e);
-		}
 		return p;
 	}
-	
-	@PostMapping(path="userTest")
+
+	@PostMapping(path = "userTest")
 	public Person getUser(@RequestBody Person in) {
 		return crearUsuarioService.getUser(in);
 	}
-	
+
 	@GetMapping("test")
 	public Name getName() {
 		return crearUsuarioService.getName();

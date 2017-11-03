@@ -35,7 +35,7 @@ public class MDCFilter implements Filter {
 			if(mdcData == null)
 			{
 				Random rnd = new Random();
-				mdcData = String.format("%1$04d-%2$d", (rnd.nextInt()%1000), new Date().getTime());
+				mdcData = String.format("%1$04d-%2$d", (rnd.nextInt(1000)), new Date().getTime());
 			}
 			MDC.put(CommonConstants.MDC_TOKEN, mdcData);
 			logger.info("Estoy en el filtro [{}]",mdcData);

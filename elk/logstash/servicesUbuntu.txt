@@ -1,0 +1,17 @@
+#Start logstage 
+bin/logstash -f config/monox-ES-log.conf
+
+
+#Install service and run when start up
+sudo update-rc.d rabbitmq-server defaults
+
+#Disable run when start up service
+sudo update-rc.d rabbitmq-server disable
+
+#Remove service
+sudo update-rc.d -f rabbitmq-server remove
+
+#start stop services 
+sudo service <elasticsearch|kibana|mongo> start
+sudo service <elasticsearch|kibana|mongo> stop
+sudo service <elasticsearch|kibana|mongo> status

@@ -45,21 +45,16 @@
 		</encoder>
 	</appender>
 	
-	<!-- Es de suma importancia no permitir que se vayan caracteres como \t\n\r o jsons -->
 	<appender name="amqp" class="org.springframework.amqp.rabbit.logback.AmqpAppender">
 		<layout>
 			<pattern>
 				{
-				"date": "%date{yyyy-MM-dd'T'HH:mm:ss.SSS}",
-				"date_ss": "%date{yyyy-MM-dd'T'HH:mm:ss}",
+				"time": "%date{ISO8601}",
 				"mdc": "%mdc{stkn}",
 				"level": "%level",
-				"categoryName": "%c",
-				"class": "%C{0}",
-				"line": ":%line",
-				"message": "%replace(%replace(%message){'\"', '#'}){'\\', ''}",
-				"exception": "%replace(%replace(%replace(%replace(%ex{full}){'\t', '#t'}){'\r\n', '#el'}){'\"', '#'}){'\\', ''}"
-				}%nopex
+				"class": "%C{0}:%line",
+				"message": "%message"
+				}
 			</pattern>
 		</layout>
 	
