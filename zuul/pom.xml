@@ -36,9 +36,20 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<mainClass>com.mk.mnx.zuul.ZuulGatewayApplication</mainClass>
-					
 				</configuration>
+				<executions>
+			        <execution>
+			            <goals>
+			                <goal>repackage</goal>
+			            </goals>
+			            <configuration>
+			                <classifier>spring-boot</classifier>
+			                <mainClass>com.mk.mnx.zuul.ZuulGatewayApplication</mainClass>
+			            </configuration>
+			        </execution>
+			    </executions>
 			</plugin>
+			
 		</plugins>
 
 		<finalName>zuul</finalName>
